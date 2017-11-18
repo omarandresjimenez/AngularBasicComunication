@@ -1,0 +1,13 @@
+<div class="panel panel-primary" *ngFor="let book of booksToShow">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{book.name}}</h3>
+  </div>
+  <div class="panel-body"  >
+    <div (click)="onSelectBook(book.name)" style="cursor:pointer" title="click to select/unselect">
+       <p><strong>Year:</strong> {{book.year}}</p>
+       <p><strong>Author:</strong> {{book.author}}</p>
+       <p><strong>Description:</strong> {{book.desc}}</p>
+       <p style="color:yellow" *ngIf="book.selected === 1"><strong>Selected!!!</strong> </p>
+    </div>
+  </div>
+</div>
